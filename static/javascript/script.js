@@ -6,6 +6,11 @@ function test() {
     document.getElementById("content").innerHTML = content;
 }
 
+const para = document.createElement("p")
+const node = document.createTextNode("hello")
+para.appendChild(node)
+const element = document.getElementById("div1")
+element.appendChild(para)
 
 var checkBoxes = document.querySelectorAll("input[type='checkbox']");
 
