@@ -1,16 +1,32 @@
-function updateElement() {
-    let nameValue = document.getElementById("writeName").value;
-    let selectedTag = document.getElementById("elementType").value;
+const updatebtn = document.getElementById("updatebtn");
+updatebtn.addEventListener("click", updateElement);
 
-    let oldElement = document.getElementById("name");
+let number = 0;
+
+function updateElement() {
+    updateDynamicElement("writeName", "nameType", "name", "name");
+    updateDynamicElement("writeContent", "contentType", "content", "content");
+}
+
+function updateDynamicElement(inputId, selectId, elementId, defaultText) {
+    let value = document.getElementById(inputId).value;
+    let selectedTag = document.getElementById(selectId).value;
+
+    let oldElement = document.getElementById(elementId);
     let parent = oldElement.parentNode;
 
-    let newElement = document.createElement(selectedTag)
-    newElement.id = "name";
-    newElement.textContent = nameValue || "name";
+    let newElement = document.createElement(selectedTag || "p")
+    newElement.id = elementId;
+    newElement.textContent = value || defaultText;
 
     parent.replaceChild(newElement, oldElement)
+    
+    number++;
+    console.log(number)
 }
+
+
+
 
 const para = document.createElement("p")
 const node = document.createTextNode("hello")
@@ -32,28 +48,31 @@ checkBoxes.forEach((box) => {
     });
 });
 
-
+// Change the color of the preview box
 function updateUI() {
 
-    // var text1 = document.getElementById("text");
-    // var text2 = document.getElementById("text2");
-    // var text3 = document.getElementById("text3");
-
-    // text1.style.display = "none";
-    // text2.style.display = "none";
-    // text3.style.display = "none";
-
     if (document.getElementById("red").checked) {
-    //  text1.style.display = "block";
-        document.body.style.backgroundColor = "red";
+        document.getElementById("preview_box").style.backgroundColor = "red";
     } else if (document.getElementById("green").checked) {
-    //  text2.style.display = "block";
-        document.body.style.backgroundColor = "green";
+        document.getElementById("preview_box").style.backgroundColor = "green";
     } else if (document.getElementById("blue").checked){
-    //  text3.style.display = "block";
-        document.body.style.backgroundColor = "blue";
+        document.getElementById("preview_box").style.backgroundColor = "blue";
     } else {
-        document.body.style.backgroundColor = "";
+        document.getElementById("preview_box").style.backgroundColor = "";
     }
 
+}
+
+
+let previewBox = document.getElementById("preview_box"); // Target the box instead of body
+let colorEl = document.getElementById("color");
+
+colorEl.addEventListener("input", changeColor); // Use "input" instead of "change" for real-time updates
+
+function changeColor() {
+    let colorChange = colorEl.value;
+
+    if (CSS.supports('color', colorChange)) {
+        previewBox.style.backgroundColor = colorChange;
+    }
 }

@@ -1,0 +1,122 @@
+<body>
+
+<button onclick="createParagraph()">Create Dropdown</button>
+<div id="container"></div>
+
+<script>
+
+function test() {
+    document.body.style.backgroundColor = "blue";
+}
+
+function createParagraph() {
+    let newParagraph = document.createElement("input"); // Create input element
+    newParagraph.type = "text"; 
+    newParagraph.id = "testing";
+    newParagraph.placeholder = "Please write something"; 
+
+    let drop = document.createElement("select"); // Create dropdown
+    drop.id = "othertest"; 
+
+    // Create an option for H1
+    let large = document.createElement("option");
+    large.value = "h1";
+    large.textContent = "H1";
+
+    let medium = document.createElement("option");
+    medium.value = "h2";
+    medium.textContent = "H2";
+
+    // Append the options to the dropdown
+    drop.appendChild(large);
+    drop.appendChild(medium);
+
+    // Create the button
+    let testbtn = document.createElement("button");
+    testbtn.textContent = "Press me";
+    testbtn.onclick = test; // Correctly set the function reference
+
+    // Append everything to the container
+    let container = document.getElementById("container");
+    container.appendChild(newParagraph);
+    container.appendChild(drop);
+    container.appendChild(testbtn);
+}
+</script>
+
+</body>
+
+
+<body>
+
+<button onclick="createParagraph()">Create Dropdown</button>
+<div id="container"></div>
+
+<script>
+
+function test() {
+    document.body.style.backgroundColor = "blue";
+}
+
+var count = 1;
+var addElements = {};
+
+function createParagraph() {
+	
+    let newParagraph = document.createElement("input"); // Create input element
+    newParagraph.type = "text"; 
+    newParagraph.id = "testing";
+    newParagraph.placeholder = "Please write something"; 
+
+    let drop = document.createElement("select"); // Create dropdown
+    drop.id = "othertest"; 
+
+    // Create an option for H1
+    let large = document.createElement("option");
+    large.value = "h1";
+    large.textContent = "H1";
+
+    let medium = document.createElement("option");
+    medium.value = "h2";
+    medium.textContent = "H2";
+    
+    let small = document.createElement("option");
+    small.value = "p";
+    small.textContent = "Paragraph"
+    
+    // Append the options to the dropdown
+    drop.appendChild(large);
+    drop.appendChild(medium);
+    drop.appendChild(small);
+
+    // Create the button
+    let testbtn = document.createElement("button");
+    testbtn.textContent = "Press me";
+    testbtn.onclick = test; // Correctly set the function reference
+
+    // Append everything to the container
+    let container = document.getElementById("container");
+    container.appendChild(newParagraph);
+    container.appendChild(drop);
+    container.appendChild(testbtn);
+}
+</script>
+
+</body>
+
+
+
+
+
+
+
+
+
+in theory!!:
+have a function that adds an element with a specified id, and also a variable that goes up by one every time the button is used
+and have a specific number of boxes possible. so like 
+if number =< 5 {
+    create box blah blah
+} else if number => 5 {
+    alert("you cant make any more boxes sorry")
+}

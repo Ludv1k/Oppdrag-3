@@ -6,37 +6,65 @@
     <title>Document</title>
     <link rel="stylesheet" href="../static/css/style.css">
 </head>
-<body>
-    <div class="inputs">
-        <div>
-            <input type="text" id="writeName" placeholder="please write a name">
-            <select id="elementType">
-                <option value="">Please select an option</option>
-                <option value="h1">H1</option>
-                <option value="h2">H2</option>
-                <option value="p">Paragraph</option>
-            </select>
+<body id="body">
+    <div class="allInputs">
+        <div class="textInputs">
+            <div>
+                <h3>Name:</h3>
+                <input type="text" id="writeName" placeholder="please write a name">
+                <select id="nameType">
+                    <option value="">Please select an option</option>
+                    <option value="h1">H1</option>
+                    <option value="h2">H2</option>
+                    <option value="p">Paragraph</option>
+                </select>
+            </div>
+            <div>
+                <h3>Content:</h3>
+                <input type="text" id="writeContent" placeholder="hi">
+                <select id="contentType">
+                    <option value="">Please select an option</option>
+                    <option value="h1">H1</option>
+                    <option value="h2">H2</option>
+                    <option value="p">Paragraph</option>
+                </select>
+            </div>
+            
+            <button id="updatebtn">press me</button>
         </div>
-        <input type="text" id="writeContent" placeholder="hi">
-        <button onclick="updateElement()">press me</button>
+
+
+        <p>Change the background color! (you can also have none checked to keep it white)</p>
+        <div>
+            <div>
+                <label for="red">Red:</label> 
+                <input type="checkbox" id="red">
+            </div>
+            <div>
+                <label for="green">Green:</label> 
+                <input type="checkbox" id="green">
+            </div>
+            <div>
+                <label for="blue">Blue:</label> 
+                <input type="checkbox" id="blue">
+            </div>
+        </div>
+        <input type="color" id="color">
     </div>
-    <div id="nameContainer">
-        <h1 id="name">name</h1>
+
+    <div id="preview_box">
+        <div id="nameContainer">
+            <h1 id="name">name</h1>
+        </div>
+        <div id="contentContainer">
+            <h3 id="content">content</h3>
+        </div>
+        
+    
+        <div id="div1">
+    
+        </div>
     </div>
-    <h3 id="content">content</h3>
-
-    <div id="div1">
-
-    </div>
-
-    <p>Change the background color!</p>
-
-    <label for="red">Red:</label> 
-    <input type="checkbox" id="red">
-    <label for="green">Green:</label> 
-    <input type="checkbox" id="green">
-    <label for="blue">Blue:</label> 
-    <input type="checkbox" id="blue">
 </body>
 <script src="../static/javascript/script.js"></script>
 </html>
