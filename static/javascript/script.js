@@ -1,9 +1,15 @@
-function test() {
-    let name = document.getElementById("writeName").value;
-    document.getElementById("name").innerHTML = name;
+function updateElement() {
+    let nameValue = document.getElementById("writeName").value;
+    let selectedTag = document.getElementById("elementType").value;
 
-    let content = document.getElementById("writeContent").value;
-    document.getElementById("content").innerHTML = content;
+    let oldElement = document.getElementById("name");
+    let parent = oldElement.parentNode;
+
+    let newElement = document.createElement(selectedTag)
+    newElement.id = "name";
+    newElement.textContent = nameValue || "name";
+
+    parent.replaceChild(newElement, oldElement)
 }
 
 const para = document.createElement("p")
@@ -29,22 +35,22 @@ checkBoxes.forEach((box) => {
 
 function updateUI() {
 
-    var text1 = document.getElementById("text");
-    var text2 = document.getElementById("text2");
-    var text3 = document.getElementById("text3");
+    // var text1 = document.getElementById("text");
+    // var text2 = document.getElementById("text2");
+    // var text3 = document.getElementById("text3");
 
-    text1.style.display = "none";
-    text2.style.display = "none";
-    text3.style.display = "none";
+    // text1.style.display = "none";
+    // text2.style.display = "none";
+    // text3.style.display = "none";
 
-    if (document.getElementById("myCheck").checked) {
-      text1.style.display = "block";
-      document.body.style.backgroundColor = "red";
-    } else if (document.getElementById("myCheck2").checked) {
-       text2.style.display = "block";
-       document.body.style.backgroundColor = "green";
-    } else if (document.getElementById("myCheck3").checked){
-        text3.style.display = "block";
+    if (document.getElementById("red").checked) {
+    //  text1.style.display = "block";
+        document.body.style.backgroundColor = "red";
+    } else if (document.getElementById("green").checked) {
+    //  text2.style.display = "block";
+        document.body.style.backgroundColor = "green";
+    } else if (document.getElementById("blue").checked){
+    //  text3.style.display = "block";
         document.body.style.backgroundColor = "blue";
     } else {
         document.body.style.backgroundColor = "";

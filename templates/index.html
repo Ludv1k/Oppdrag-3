@@ -7,30 +7,36 @@
     <link rel="stylesheet" href="../static/css/style.css">
 </head>
 <body>
-    <input type="text" id="writeName" placeholder="please write a name">
-    <input type="text" id="writeContent" placeholder="hi">
-    <button onclick="test()">press me</button>
-    
-
-    <h1 id="name">name</h1>
+    <div class="inputs">
+        <div>
+            <input type="text" id="writeName" placeholder="please write a name">
+            <select id="elementType">
+                <option value="">Please select an option</option>
+                <option value="h1">H1</option>
+                <option value="h2">H2</option>
+                <option value="p">Paragraph</option>
+            </select>
+        </div>
+        <input type="text" id="writeContent" placeholder="hi">
+        <button onclick="updateElement()">press me</button>
+    </div>
+    <div id="nameContainer">
+        <h1 id="name">name</h1>
+    </div>
     <h3 id="content">content</h3>
 
     <div id="div1">
 
     </div>
 
-    <p>Display some text when the checkbox is checked:</p>
+    <p>Change the background color!</p>
 
-    <label for="myCheck">Checkbox:</label> 
-    <input type="checkbox" id="myCheck">
-    <label for="myCheck2">Checkbox 2:</label> 
-    <input type="checkbox" id="myCheck2">
-    <label for="myCheck3">Checkbox 3:</label> 
-    <input type="checkbox" id="myCheck3">
-    
-    <p id="text" style="display:none">Checkbox is CHECKED!</p>
-    <p id="text2" style="display:none">Checkbox 2 is CHECKED!</p>
-    <p id="text3" style="display:none">Checkbox 3 is CHECKED!</p>
+    <label for="red">Red:</label> 
+    <input type="checkbox" id="red">
+    <label for="green">Green:</label> 
+    <input type="checkbox" id="green">
+    <label for="blue">Blue:</label> 
+    <input type="checkbox" id="blue">
 </body>
 <script src="../static/javascript/script.js"></script>
 </html>
