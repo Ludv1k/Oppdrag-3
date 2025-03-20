@@ -10,6 +10,9 @@ function updateElement() {
     newElement.textContent = nameValue || "name";
 
     parent.replaceChild(newElement, oldElement)
+
+    let content = document.getElementById("writeContent").value;
+    document.getElementById("content").innerHTML = content;
 }
 
 const para = document.createElement("p")
