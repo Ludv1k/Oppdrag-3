@@ -23,6 +23,7 @@ body {
     flex-direction: column;
 
     width: 20vw;
+<<<<<<< HEAD
 }
 
 #preview_box {
@@ -40,4 +41,6 @@ body {
 
     background-color: rgb(96, 103, 137);
     color: whitesmoke;
+=======
+>>>>>>> 57f1f21c76448f93dcc2cef6c4932b10bc710ed9
 }
