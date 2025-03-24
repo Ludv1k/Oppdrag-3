@@ -20,15 +20,9 @@ function updateDynamicElement(inputId, selectId, elementId, defaultText) {
     newElement.textContent = value || defaultText;
 
     parent.replaceChild(newElement, oldElement)
-<<<<<<< HEAD
     
     number++;
     console.log(number)
-=======
-
-    let content = document.getElementById("writeContent").value;
-    document.getElementById("content").innerHTML = content;
->>>>>>> 57f1f21c76448f93dcc2cef6c4932b10bc710ed9
 }
 
 
