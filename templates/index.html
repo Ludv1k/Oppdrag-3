@@ -9,7 +9,7 @@
 <body id="body">
     <div class="allInputs">
         <div class="textInputs">
-            <div>
+            <div class="inputField">
                 <h3>Name:</h3>
                 <input type="text" id="writeName" placeholder="please write a name">
                 <select id="nameType">
@@ -19,7 +19,7 @@
                     <option value="p">Paragraph</option>
                 </select>
             </div>
-            <div>
+            <div class="inputField">
                 <h3>Content:</h3>
                 <input type="text" id="writeContent" placeholder="hi">
                 <select id="contentType">
@@ -30,6 +30,8 @@
                 </select>
             </div>
             
+            <div id="container"></div>
+            <button id="newText">Create Dropdown</button>
             <button id="updatebtn">press me</button>
         </div>
 
@@ -59,11 +61,7 @@
         <div id="contentContainer">
             <h3 id="content">content</h3>
         </div>
-        
-    
-        <div id="div1">
-    
-        </div>
+        <div id="contentContainer2"></div>
     </div>
 </body>
 <script src="../static/javascript/script.js"></script>
