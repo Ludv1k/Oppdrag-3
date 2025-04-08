@@ -12,6 +12,7 @@ function updateElement() {
     updateDynamicElement("writeContent2", "contentType2", "content2", "content2");
     updateDynamicElement("writeContent3", "contentType3", "content3", "content3");
     updateDynamicElement("writeContent4", "contentType4", "content4", "content4");
+    updateDynamicElement("writeContent5", "contentType5", "content5", "content5");
 }
 
 function updateDynamicElement(inputId, selectId, elementId, defaultText) {
@@ -143,7 +144,7 @@ function createParagraph() {
 
         number++;
     } else if (number == 2) {
-                // Create a div wrapper to match existing structure
+        // Create a div wrapper to match existing structure
         let div4 = document.createElement("div");
 
         // Create label
@@ -199,6 +200,60 @@ function createParagraph() {
 
         number++;
     } else if (number == 3) {
+        // Create a div wrapper to match existing structure
+        let div5 = document.createElement("div");
+
+        // Create label
+        let label5 = document.createElement("h3");
+        label5.textContent = "Content 5:";
+
+        // Create input field
+        let input5 = document.createElement("input");
+        input5.type = "text";
+        input5.id = "writeContent5";
+        input5.placeholder = "Please write something";
+
+        // Create dropdown
+        let dropdown5 = document.createElement("select");
+        dropdown5.id = "contentType5";
+
+        // Create options
+        let large5 = document.createElement("option");
+        large5.value = "h1";
+        large5.textContent = "H1";
+
+        let medium5 = document.createElement("option");
+        medium5.value = "h2";
+        medium5.textContent = "H2";
+
+        let small5 = document.createElement("option");
+        small5.value = "p";
+        small5.textContent = "Paragraph";
+
+        // Append options to dropdown
+        dropdown5.appendChild(large5);
+        dropdown5.appendChild(medium5);
+        dropdown5.appendChild(small5);
+
+        // Append elements to new div
+        div5.appendChild(label5);
+        div5.appendChild(input5);
+        div5.appendChild(dropdown5);
+
+        
+        // Apply the same class for styling (if needed)
+        div5.classList.add("inputField");
+
+        let text5 = document.createElement("p")
+        text5.id = "content5"
+
+        // Append to container
+        let container = document.getElementById("container");
+        container.appendChild(div5);
+
+        let contentContainer5 = document.getElementById("contentContainer5");
+        contentContainer5.appendChild(text5)
+
         number++;
     } else if (number == 4 || number >= 4) {
         alert("you've made the max amount")
