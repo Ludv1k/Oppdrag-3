@@ -10,7 +10,8 @@ function updateElement() {
     updateDynamicElement("writeName", "nameType", "name", "name");
     updateDynamicElement("writeContent", "contentType", "content", "content");
     updateDynamicElement("writeContent2", "contentType2", "content2", "content2");
-    // updateDynamicElement("writeContent3", "contentType3", "content3", "content3");
+    updateDynamicElement("writeContent3", "contentType3", "content3", "content3");
+    updateDynamicElement("writeContent4", "contentType4", "content4", "content4");
 }
 
 function updateDynamicElement(inputId, selectId, elementId, defaultText) {
@@ -86,62 +87,116 @@ function createParagraph() {
 
         number++;
     } else if (number == 1) {
-        // // Create a div wrapper to match existing structure
-        // let div3 = document.createElement("div");
+        // Create a div wrapper to match existing structure
+        let div3 = document.createElement("div");
 
-        // // Create label
-        // let label3 = document.createElement("h3");
-        // label3.textContent = "Content 3:";
+        // Create label
+        let label3 = document.createElement("h3");
+        label3.textContent = "Content 3:";
 
-        // // Create input field
-        // let input3 = document.createElement("input");
-        // input3.type = "text";
-        // input3.id = "writeContent3";
-        // input3.placeholder = "Please write something";
+        // Create input field
+        let input3 = document.createElement("input");
+        input3.type = "text";
+        input3.id = "writeContent3";
+        input3.placeholder = "Please write something";
 
-        // // Create dropdown
-        // let dropdown3 = document.createElement("select");
-        // dropdown3.id = "contentType3";
+        // Create dropdown
+        let dropdown3 = document.createElement("select");
+        dropdown3.id = "contentType3";
 
-        // // Create options
-        // let large3 = document.createElement("option");
-        // large3.value = "h1";
-        // large3.textContent = "H1";
+        // Create options
+        let large3 = document.createElement("option");
+        large3.value = "h1";
+        large3.textContent = "H1";
 
-        // let medium3 = document.createElement("option");
-        // medium3.value = "h2";
-        // medium3.textContent = "H2";
+        let medium3 = document.createElement("option");
+        medium3.value = "h2";
+        medium3.textContent = "H2";
 
-        // let small3 = document.createElement("option");
-        // small3.value = "p";
-        // small3.textContent = "Paragraph";
+        let small3 = document.createElement("option");
+        small3.value = "p";
+        small3.textContent = "Paragraph";
 
-        // // Append options to dropdown
-        // dropdown3.appendChild(large3);
-        // dropdown3.appendChild(medium3);
-        // dropdown3.appendChild(small3);
+        // Append options to dropdown
+        dropdown3.appendChild(large3);
+        dropdown3.appendChild(medium3);
+        dropdown3.appendChild(small3);
 
-        // // Append elements to new div
-        // div3.appendChild(label3);
-        // div3.appendChild(input3);
-        // div3.appendChild(dropdown3);
+        // Append elements to new div
+        div3.appendChild(label3);
+        div3.appendChild(input3);
+        div3.appendChild(dropdown3);
 
         
-        // // Apply the same class for styling (if needed)
-        // div3.classList.add("inputField");
+        // Apply the same class for styling (if needed)
+        div3.classList.add("inputField");
 
-        // let text3 = document.createElement("p")
-        // text3.id = "content3"
+        let text3 = document.createElement("p")
+        text3.id = "content3"
 
-        // // Append to container
-        // let container = document.getElementById("container");
-        // container.appendChild(div3);
+        // Append to container
+        let container = document.getElementById("container");
+        container.appendChild(div3);
 
-        // let contentContainer3 = document.getElementById("contentContainer3");
-        // contentContainer3.appendChild(text3)
+        let contentContainer3 = document.getElementById("contentContainer3");
+        contentContainer3.appendChild(text3)
 
         number++;
     } else if (number == 2) {
+                // Create a div wrapper to match existing structure
+        let div4 = document.createElement("div");
+
+        // Create label
+        let label4 = document.createElement("h3");
+        label4.textContent = "Content 4:";
+
+        // Create input field
+        let input4 = document.createElement("input");
+        input4.type = "text";
+        input4.id = "writeContent4";
+        input4.placeholder = "Please write something";
+
+        // Create dropdown
+        let dropdown4 = document.createElement("select");
+        dropdown4.id = "contentType4";
+
+        // Create options
+        let large4 = document.createElement("option");
+        large4.value = "h1";
+        large4.textContent = "H1";
+
+        let medium4 = document.createElement("option");
+        medium4.value = "h2";
+        medium4.textContent = "H2";
+
+        let small4 = document.createElement("option");
+        small4.value = "p";
+        small4.textContent = "Paragraph";
+
+        // Append options to dropdown
+        dropdown4.appendChild(large4);
+        dropdown4.appendChild(medium4);
+        dropdown4.appendChild(small4);
+
+        // Append elements to new div
+        div4.appendChild(label4);
+        div4.appendChild(input4);
+        div4.appendChild(dropdown4);
+
+        
+        // Apply the same class for styling (if needed)
+        div4.classList.add("inputField");
+
+        let text4 = document.createElement("p")
+        text4.id = "content4"
+
+        // Append to container
+        let container = document.getElementById("container");
+        container.appendChild(div4);
+
+        let contentContainer4 = document.getElementById("contentContainer4");
+        contentContainer4.appendChild(text4)
+
         number++;
     } else if (number == 3) {
         number++;

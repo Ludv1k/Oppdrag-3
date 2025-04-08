@@ -2,8 +2,8 @@ body {
     display: flex;
     flex-direction: row;
 
-    justify-content: space-between;
-    width: 65vw;
+    align-items: flex-start;
+    gap: 20vw;
 
     margin: 0;
 }
@@ -36,7 +36,8 @@ body {
 
 #preview_box {
     width: 15vw;
-    height: 50vh;
+    min-height: 20vh;
+    height: auto;
 
     border-radius: 7%;
     margin-top: 3vh;
@@ -49,4 +50,6 @@ body {
 
     background-color: rgb(96, 103, 137);
     color: whitesmoke;
+
+    overflow-wrap: break-word; /* Optional: for long words */
 }
